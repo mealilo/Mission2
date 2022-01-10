@@ -18,13 +18,13 @@
 </head>
 <body>
 
-    <div class="container d-flex flex-column justify-content-center">
+    <div class="container d-flex flex-column justify-content-center bg-light p-5">
         <h1>My Preferred Name? Why, it's Brennan Williams</h1>
         <div class="d-flex justify-content-center m-3">
             <img src="img/PXL_20220102_073429945.jpg" width="400" height="300" />
         </div>
 
-        <div class="bg-info rounded-5">
+        <div class="bg-info rounded-3">
             <p class="p-2">Here is a picture of me with my new 3d printer. This is my 5th one that i've had, and it's one of my passions!</p>
             <p class="p-2">
                 Hello IS 413! I love c#! I've been working as a web developer at the College of Nursing for the past 10ish months. We use c#, and while
@@ -43,32 +43,47 @@
         </ol>
 
 
-        <div class="d-flex justify-content-center flex-column  bg-success rounded-5">
+        <div class="bg-success rounded-3 m-auto p-3">
 
             <h3 class="m-3">Calculate your grade here!</h3>
+            <div class="d-flex justify-content-center">
+                <form style="width: 50%">
+                    <label>Assignment Grade</label>
+                    <input class="form-control" id="asgGrade" />
+                    <br />
 
-            <form>
-                <label>Assignment Grade</label>
-                <input id="asgGrade" />
-                <br />
+                    <label>Group Project Grade</label>
+                    <input class="form-control" id="projectGrade" />
+                    <br />
 
-                <label>Group Project Grade</label>
-                <input id="projectGrade" />
-                <br />
+                    <label>Quizzes Grade</label>
+                    <input class="form-control" id="quizGrade" />
+                    <br />
 
-                <label>Quizzes Grade</label>
-                <input id="quizGrade" />
-                <br />
+                    <label>Exams Grade</label>
+                    <input class="form-control" id="examGrade" />
+                    <br />
 
-                <label>Exams Grade</label>
-                <input id="examGrade" />
-                <br />
+                    <label>Intext Grade</label>
+                    <input class="form-control" id="intexGrade" />
+                    <br />
+                    <input type="button" value="Calculate Grade" class="form-control" id="calcGrade" />
+                </form>
+            </div>
+            
+        </div>
 
-                <label>Intext Grade</label>
-                <input id="intexGrade" />
-                <br />
-                <button id="calcGrade" type="submit">Calculate Grade</button>
-            </form>
+        <div class=" d-flex justify-content-center flex-column bg-danger p-5 m-3 rounded-3">
+            <div class=" d-flex justify-content-center">
+                <p>Final Grade Numerical</p>
+                <p id="finalGradeNum"></p>
+            </div>
+            
+            <div class=" d-flex justify-content-center">
+                <p>Final Grade Letter
+                <p id="finalGradeLetter"></p>
+            </div>
+           
         </div>
     </div>
     <!--Javascript files-->
