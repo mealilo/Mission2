@@ -12,10 +12,12 @@ $("#calcGrade").click(function () {
 
 
     var finalGradeNum = ((asgGrade * .55) + (projectGrade * .05) + (quizGrade * .1)
-        + (examGrade * .20) + (intexGrade * .1));
+        + (examGrade * .20) + (intexGrade * .1)) + "%";
 
     var finalGradeLetter = "";
 
+
+    // Logic to get final letter grade
     if (finalGradeNum >= 94)
         finalGradeLetter = "A";
     else if (finalGradeNum < 94 && finalGradeNum >= 90)
@@ -42,7 +44,7 @@ $("#calcGrade").click(function () {
         finalGradeLetter = "Error, Unable to Computer Grade";
 
 
-
+    // Set p tags on page to new variabvles
     $("#finalGradeNum").html(finalGradeNum);
     $("#finalGradeLetter").html(finalGradeLetter);
 })
