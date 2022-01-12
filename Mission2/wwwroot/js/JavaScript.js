@@ -11,8 +11,10 @@ $("#calcGrade").click(function () {
     // Do maths with weights of calculated grades
 
 
-    var finalGradeNum = ((asgGrade * .55) + (projectGrade * .05) + (quizGrade * .1)
+    var finalGradeNumPercent = ((asgGrade * .55) + (projectGrade * .05) + (quizGrade * .1)
         + (examGrade * .20) + (intexGrade * .1)) + "%";
+    var finalGradeNum = ((asgGrade * .55) + (projectGrade * .05) + (quizGrade * .1)
+        + (examGrade * .20) + (intexGrade * .1));
 
     var finalGradeLetter = "";
 
@@ -45,6 +47,6 @@ $("#calcGrade").click(function () {
 
 
     // Set p tags on page to new variabvles
-    $("#finalGradeNum").html(finalGradeNum);
+    $("#finalGradeNum").html(finalGradeNumPercent);
     $("#finalGradeLetter").html(finalGradeLetter);
 })
